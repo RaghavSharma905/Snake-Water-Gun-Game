@@ -56,11 +56,11 @@ int main()
     char you, comp;
     srand(time(0));
     int number = rand() & 100 + 1; //Generating random number between 1-100
-    if (number < 33)
+    if (number <= 33)
     {
         comp = 's';
     }
-    else if (number > 33 && number < 66) //1/3 of 100 is =33 & 2/3 of 100 is =66
+    else if (number > 33 && number <=66) //1/3 of 100 is =33 & 2/3 of 100 is =66
     {
         comp = 'w';
     }
@@ -69,7 +69,7 @@ int main()
         comp = 'g';
     }
     // 33 & 66 will make three equal parts, so if the number lies before 33 it's - s
-    // if lies after 33 it's - w and if lies before 66 it's - g
+    // if lies between 33 and 66 it's - w and if lies after 66 it's - g
 
     // comp = 's';  //We can also use this to give a initial char to computer.
     printf("Enter 's' for snake, 'w' for water, 'g' for gun\n");
